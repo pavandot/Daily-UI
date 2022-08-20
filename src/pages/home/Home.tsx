@@ -8,8 +8,8 @@ const Home = () => {
 		{ id: 3, route: '/ecommerce-product-page', title: 'Ecommerce product page' },
 	];
 	return (
-		<section className=' min-h-screen w-full bg-gray-100'>
-			<h1 className=' py-10 text-center text-2xl text-gray-800 md:text-4xl xl:text-6xl'>Daily Ui</h1>
+		<section className=' min-h-screen w-full bg-gray-900'>
+			<h1 className=' py-10 text-center text-2xl text-gray-200 md:text-4xl xl:text-6xl'>Daily Ui</h1>
 			<div className='mx-auto grid max-w-5xl xl:max-w-7xl gap-5 px-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
 				{componentJson.map((items) => {
 					return (
