@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 // Images
-import CartSvg from "../../../asset/ecommerceProductPage/icon-cart.svg";
-import PluseSvg from "../../../asset/ecommerceProductPage/icon-plus.svg";
-import MinusSvg from "../../../asset/ecommerceProductPage/icon-minus.svg";
-import ProductOneThumbnail from "../../../asset/ecommerceProductPage/image-product-1-thumbnail.jpg";
+import CartSvg from '../../../asset/ecommerceProductPage/icon-cart-white.svg';
+import PluseSvg from '../../../asset/ecommerceProductPage/icon-plus.svg';
+import MinusSvg from '../../../asset/ecommerceProductPage/icon-minus.svg';
+import ProductOneThumbnail from '../../../asset/ecommerceProductPage/image-product-1-thumbnail.jpg';
 
 export interface CartItemType {
 	id: number;
@@ -33,8 +33,8 @@ const AboutProduct = ({ setCartProduct, cartProduct }: Props) => {
 
 	const cartItem: CartItemType = {
 		id: 1,
-		name: "Fall Limited Edition Sneakers",
-		price: "125.00",
+		name: 'Fall Limited Edition Sneakers',
+		price: '125.00',
 		image: ProductOneThumbnail,
 		numberOfItem: numberOfItem,
 		total: numberOfItem * 125,
@@ -52,14 +52,19 @@ const AboutProduct = ({ setCartProduct, cartProduct }: Props) => {
 		<section className=' max-w-2xl mx-auto xl:max-w-none '>
 			<div>
 				<p className=' text-ecommerceProductPage-orange font-bold mb-5'>SNEAKER COMPANY</p>
-				<h1 className=' mb-5 md:mb-10 text-ecommerceProductPage-vary-dark-blue font-bold text-3xl md:text-5xl'>Fall Limited Edition Sneakers</h1>
+				<h1 className=' mb-5 md:mb-10 text-ecommerceProductPage-vary-dark-blue font-bold text-3xl md:text-5xl'>
+					Fall Limited Edition Sneakers
+				</h1>
 				<p className=' text-ecommerceProductPage-dark-grayish-blue mb-8 max-w-xl '>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quis architecto doloremque necessitatibus esse ea, voluptates praesentium exercitationem nulla, natus eius incidunt. Harum Lorem ipsum dolor sit amet.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quis architecto doloremque necessitatibus esse ea,
+					voluptates praesentium exercitationem nulla, natus eius incidunt. Harum Lorem ipsum dolor sit amet.
 				</p>
 				<div className=' mb-8 space-y-1 flex justify-between lg:block '>
 					<p className=' space-x-5'>
 						<span className=' text-ecommerceProductPage-vary-dark-blue font-bold text-2xl'>$125.00</span>
-						<span className=' text-2xl text-ecommerceProductPage-orange bg-ecommerceProductPage-pale-orange py-1 px-2 rounded  '>50%</span>
+						<span className=' text-2xl text-ecommerceProductPage-orange bg-ecommerceProductPage-pale-orange py-1 px-2 rounded  '>
+							50%
+						</span>
 					</p>
 					<p className=' text-ecommerceProductPage-dark-grayish-blue line-through'>$250</p>
 				</div>
@@ -70,10 +75,15 @@ const AboutProduct = ({ setCartProduct, cartProduct }: Props) => {
 						<img src={PluseSvg} alt='' onClick={handelIncrement} className=' cursor-pointer p-3' />
 					</div>
 					<button
-						className={` w-full xs:w-[80%] md:w-1/2 text-white flex justify-center items-center space-x-5 p-3 ${numberOfItem === 0 || isProductExist ? "bg-ecommerceProductPage-orange cursor-not-allowed" : "bg-ecommerceProductPage-orange "} rounded-lg`}
-						onClick={handelAddToCart}>
-						<img src={CartSvg} alt='' />
-						<span> {isProductExist ? "Already in cart" : "Add to cart"} </span>
+						className={` w-full xs:w-[80%] md:w-1/2 text-white flex justify-center items-center space-x-5 p-3 ${
+							numberOfItem === 0 || isProductExist
+								? 'bg-ecommerceProductPage-orange cursor-not-allowed'
+								: 'bg-ecommerceProductPage-orange '
+						} rounded-lg`}
+						onClick={handelAddToCart}
+					>
+						<img src={CartSvg} alt='' className=' fill-white' />
+						<span> {isProductExist ? 'Already in cart' : 'Add to cart'} </span>
 					</button>
 				</div>
 			</div>
